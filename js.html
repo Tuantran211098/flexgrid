@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js.css"/>
+    <title>Document</title>
+    <script type="text/javascript" src="./java.js"></script>
+    
+</link>
+</head>
+<body style="text-align:center">
+   
+<!--
+    <button onclick="showImage('src/apple.jpg')">Apple</button>
+    <img id="my_image" src="./src/apple.jpg" style="width: 100px;height: 100px;"/>
+    <button  onclick="showImage('src/mango.jpg')">Mango</button>
+    <div>
+        <button onclick="test()" type="button">
+            click on result
+        </button>
+        <p id="demo"></p>
+    </div>
+    <h2>JavaScript Comparisons</h2>
+
+    <p>Input your age and click the button:</p>
+
+    <input id="age" value="" />
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demos"></p>
+-->
+    <p>Convert string to upper case:</p>
+
+<!--
+<button onclick="clickFunction('src/apple.jpg')" >Prev</button>
+<img id="imgage" src="src/apple.jpg" width="100px"/>
+<button onclick="clickFunction('src/mango.jpg')">Next</button>
+-->
+    <h2 class="java">JavaScript Arrays</h2>
+
+<p>The best way to loop through an array is using a standard for loop:</p>
+  <p id="demo"></p>
+     <p id="demos"></p>
+     <input id="input" value="" name="input" />
+     <button type="button" name="button" onclick="handle()">Check Err</button>
+     <p id="err"></p>
+     <p id="class"></p>
+    <script>
+        function handle(){
+            var input = document.getElementById('input').value;
+            
+            var regphone2 = /^\d{4}[-\s]?s$/ || /^\d{4}[-\s]?\d{3}[-\s]?\d{4}$/;
+            var test = regphone2.test(input);
+          
+  console.log( test)
+            try{
+                if(input == ''){
+                    throw "Not empty"
+                 }
+                if(isNaN(input)){
+                    throw "not is string"
+                }   
+                
+                if(test){
+                    throw "haha"
+                }
+                else{
+                    throw "need 10 number or 11"
+                }
+                document.getElementById('err').innerHTML = "con"+test
+            }catch(err){
+                document.getElementById('err').innerHTML = err
+            }
+        }
+       class Persons{
+            constructor(name,address,age){
+                this.name = name;
+                this.address = address;
+                this.age = age
+            }
+            names(){
+                return this.name + " được " + this.age
+            }
+       }
+       var infor = new Persons("tuans","hcm","23")
+       console.log(infor.names())
+//        var friends = [{
+//          name: 'Anna',
+//          books: ['Bible', 'Harry Potter'],
+//          age: 21
+//        }, {
+//          name: 'Bob',
+//          books: ['War and peace', 'Romeo and Juliet'],
+//          age: 26
+//        }, {
+//          name: 'Alice',
+//          books: ['The Lord of the Rings', 'The Shining'],
+//          age: 18
+//        }]; 
+//       var allbooks = friends.reduce(myFuntion,"");
+//        function myFuntion(acc, cur) {
+//             console.log(cur)
+//  return [...acc, ...cur.books];
+//}
+//        console.log(allbooks)
+//         document.getElementById('demo').innerHTML= allbooks;
+//        var year = [1997,2000];
+//        var arrs = arrcal(year,calcu);
+//        
+//        function arrcal(arr,fn){
+//          var arres = [];
+//            for(var i = 0;i<arr.length;i++){
+//                arres.push(fn(arr[i]))
+//            }
+//          
+//        }
+//        function calcu(el){
+//            console.log(el)
+//            var result = 2020 - el 
+//            console.log(result)
+//            return result
+//        }
+//           
+//        function User(){
+//              
+//            var username,password;
+//            function dologin(user,pw){
+//                username = user;
+//                password = pw;
+//            }
+//            var public = {
+//                    login:dologin
+//                };
+//            return public;
+//          
+//        }
+//        console.log(fred)
+//          var fred = User();
+//         fred.login("fred","dsdsaasads");
+//        var arr ;
+//        arr= ["a","b","c","a","b"];
+//        var occur = arr.reduce(myfunction,[]);
+//       
+//        function myfunction(obj,item,index){
+//             console.log(index)
+//            obj[item] = (obj[item] || 0) +1
+//            return obj
+//         
+//        }
+//        console.log(occur)
+//         console.log(occur)
+//        document.getElementById('demo').innerHTML= fred;
+       
+        function Person(first,last,age){
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.fullName = function(){
+                return this.firstName + "" + this.lastName
+            }
+        }
+        var p1 = new Person("tuan","tran",20);
+        p1.eat = function (){
+            return "soap...."
+        }
+         console.log(p1 )
+        document.getElementById("demo").innerHTML= p1.fullName();
+        
+    
+            var date = new Date();
+            var day = date.getDate();
+            var month = date.getMonth();
+            var resutl= "";
+            switch(month){
+                case 0: 
+                    resutl="Monday";
+                    break;
+                case 1: 
+                    resutl="Tuesday";
+                    break;
+                case 9-1:
+                    resutl = "sep";
+                     break;
+                default:
+                    resutl = "not"
+            }
+        console.log(month)
+        
+         document.getElementById("demos").innerHTML=resutl;
+      
+        var email = "tuantran98@gmail.com";
+        var reg = /^\w*@[a-zA-Z]{3,}\.com$/i;
+        var phone = "0904-336-432";
+        var regphone = /^\d{4}[-\s]?\d{3}[-\s]?\d{3}$/;
+       
+      console.log(regphone.test(phone))
+    </script>
+</html>
